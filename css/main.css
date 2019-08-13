@@ -1,0 +1,1590 @@
+/***********************************************/
+/*************** GENERAL STYLES ****************/
+/***********************************************/
+* {
+    padding: 0;
+    margin: 0;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+
+/******************************************************/
+/*************** START: HEADER SECTION ****************/
+/******************************************************/
+
+/** Navigation **/
+
+.navigation {
+    width: 100%;
+    z-index: 9999;
+    background-color: transparent;
+    position: fixed;
+    top:0;
+}
+
+
+.header .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    color: #fff;
+    font-size: 26px;
+    z-index: 999;
+}
+
+.header .navigation h1 a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/** Nav Menu **/
+
+.header .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.header .navigation ul li {
+    float: left;
+}
+
+.header .navigation ul li a:link,
+.header .navigation ul li a:visited {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #fff;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.header .navigation ul li a:hover,
+.header .navigation ul li a:active {
+    color: #ff6837;
+}
+
+/** StickyNav with jQuery**/
+
+.is-sticky .navigation {
+    background-color:  #fff;
+    width: 100%;
+    border-bottom: 1px solid #b5b2b2;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+    z-index: 9999;
+}
+
+.is-sticky .navigation h1 {
+    float: left;
+    padding: 16px 0 16px 10px;
+    font-size: 26px;
+    color: #F05422;
+}
+
+.is-sticky .navigation h1 a {
+    color: #F05422;
+}
+
+.is-sticky .navigation ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    float: right;
+}
+
+.is-sticky .navigation ul li {
+    float: left;
+}
+
+.is-sticky .navigation nav ul a:link, 
+.is-sticky .navigation  nav ul a:visited  {
+    display: block;
+    font-weight: bold;
+    text-align: center;
+    padding: 24px  10px 24px;
+    text-decoration: none;
+    color: #F05422;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.is-sticky .navigation nav ul a:hover, 
+.is-sticky .navigation nav ul a:active {
+    color: #000; 
+}
+
+.is-sticky .navigation nav ul a.active {
+    background-color: #F05422;
+    color: #fff; 
+}
+
+/** Mobile Nav Menu **/
+
+.mobileNavIcon {
+    display: inline-block;
+    cursor: pointer;
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    display: none;
+}
+
+.bar1, .bar2, .bar3 {
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px) ;
+    transform: rotate(-45deg) translate(-9px, 6px) ;
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-7px, -6px) ;
+    transform: rotate(45deg) translate(-7px, -6px) ;
+}
+
+.is-sticky .navigation .mobileNavIcon .bar1,
+.is-sticky .navigation .mobileNavIcon .bar2,
+.is-sticky .navigation .mobileNavIcon .bar3 {
+    background-color: #F05422;
+}
+
+
+/** BG Slides **/
+
+.header #home {
+    z-index: 1;
+	position: relative;
+    height: 750px;
+}
+
+.header .slides {
+  content: "";
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  
+}
+
+.header .slides .slide1 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/bg-norkuz-forex-consulting.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/bg-norkuz-forex-consulting.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide2 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/bg-international-forex-expert.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/bg-international-forex-expert.jpg);
+    background-position: center;
+}
+
+.header .slides .slide3 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/bg-experienced-professionals.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/bg-experienced-professionals.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide4 {
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/bg-clientele.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/bg-clientele.jpg);
+    background-position: top center;
+}
+
+.header .slides .slide1,
+.header .slides .slide2,
+.header .slides .slide3,
+.header .slides .slide4 {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 650px;
+}
+
+/** Header Subtitle ***/
+
+.header .title {
+    font-size: 51px;
+    color: #fff;
+    width: 100%;
+    padding: 200px 10px  0;
+    background-color: transparent;
+}
+
+.header .details {
+    font-size: 40px;
+    padding: 0 10px;
+    font-weight: 300;
+    color: #fff;
+}
+
+/** Button Area **/
+
+.header .buttons {
+    margin-top: 50px;
+    padding: 0 10px;
+}
+
+.header .buttons a:link,
+.header .buttons a:visited {
+    border: 2px solid #fff;
+    padding: 10px  16px;
+    font-weight: bold;
+    color: #fff;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s; 
+    cursor: pointer;
+    text-decoration: none;
+} 
+
+.header .buttons a.whatWeDo:link,
+.header .buttons a.whatWeDo:visited {
+    background-color: #F05422;
+    border: 2px solid #F05422;
+}
+
+
+.header .buttons a:hover,
+.header .buttons a:active {
+	color: #F05422;
+    background-color: white;
+}
+
+.header .buttons a.whatWeDo:hover,
+.header .buttons a.whatWeDo:active {
+    background-color: #fff;
+    border: 2px solid #fff;
+}
+
+/*************** MEDIA QUERIES FOR THE HEADER SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+    
+    .header .navigation h1 span {
+        display: none;
+    }
+    
+    .header .slides .slide1,
+    .header .slides .slide2,
+    .header .slides .slide3,
+    .header .slides .slide4 {
+        height: 500px;
+    } 
+    
+    .header .title,
+    .header .details,
+    .header .buttons {
+        text-align: center;
+    }
+    
+    .header .title {
+        font-size: 41px;
+        width: 100%;
+        margin-top: 136px;
+        padding: 0 10px;
+    }
+
+    .header .details {
+        font-size: 30px;
+        padding: 0 10px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+
+   /** Mobile Navigation **/
+
+    .mobileNavIcon {
+        display: block;    
+    }  
+
+    .navigation {
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+
+    .header .navigation h1 {
+        color: #fff;
+    }
+
+    
+    .header .navigation h1 {
+        font-size: 18px;
+        float: none;
+    }
+    
+    .header .navigation ul {
+        float: none;
+        display: none;
+        background-color: #F05422;
+    }
+    
+    .header .navigation ul li {
+       float: none;
+    }
+
+    .header .navigation ul li a:hover,
+    .header .navigation ul li a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation h1 {
+        color: #F05422;
+    }
+
+    
+    .is-sticky .navigation ul {
+        background-color: #F05422;
+        border-top: 1px solid #b5b2b2;
+    }
+    
+    .is-sticky .navigation nav ul a:link, 
+    .is-sticky .navigation  nav ul a:visited  {
+        color: #fff;
+    }
+
+    .is-sticky .navigation nav ul a:hover, 
+    .is-sticky .navigation nav ul a:active {
+        color: #000;
+    }
+    
+    .is-sticky .navigation nav ul a.active {
+        color: #000; 
+    }
+    
+    
+    .header .slides .slide1 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/small-bg-norkuz-forex-consulting.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/small-bg-norkuz-forex-consulting.jpg);
+    }
+
+    .header .slides .slide2 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/small-bg-international-forex-expert.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/small-bg-international-forex-expert.jpg);
+    }
+
+    .header .slides .slide3 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/small-bg-experienced-professionals.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/small-bg-experienced-professionals.jpg);
+    }
+
+    .header .slides .slide4 {
+        background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/header/small-bg-clientele.jpg);
+        background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/header/small-bg-clientele.jpg);
+
+    }
+    
+}
+
+@media only screen and (max-width: 650px) {
+
+    .header .title {
+        font-size: 31px;
+    }
+
+    .header .details {
+        font-size: 25px;
+    }
+    
+    .header .buttons {
+        padding: 0 10px;
+    }
+}
+
+
+@media only screen and (max-width: 350px) {
+    .header .navigation h1 {
+        font-size: 16px;
+    }
+    
+    .header .navigation h1 span {
+        display: none;
+    }
+    
+    .header .title {
+        text-align: center;
+        font-size: 25px;
+        margin-top: 106px;
+    }
+
+    .header .details {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .header .buttons {
+        margin-top: 30px;
+    }
+    
+    .header .buttons a {
+        padding: 10px  16px;
+        display: block;
+        margin: 0 auto;
+        width: 150px;
+        text-align: center;
+    } 
+}
+
+/****************************************************/
+/*************** END: HEADER SECTION ****************/
+/****************************************************/
+
+
+
+
+
+/******************************************************/
+/************** START: SERVICES SECTION ***************/
+/******************************************************/
+
+.services {
+   margin-top: 585px;
+   line-height: 150%;
+   margin-bottom: 61px;
+}
+
+.services  .container {
+    padding: 79px   10px   0;
+    text-align: center; 
+
+}
+
+
+/** Services Introduction **/
+
+.services .title {
+   font-size: 30px;
+}
+
+.services .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #F05422;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+
+.services p {
+    font-size: 16px;
+    margin-top: 40px;
+}
+
+
+/** what_We_do **/
+
+.services p.whatWeDo {
+    color: #F05422;
+    font-size: 25px;
+    text-transform: uppercase;
+    font-weight: bold;
+    line-height: 150%;
+}
+
+.services p.whatWeDo span {
+    color: #000;
+}
+
+
+/** Our Results **/
+.services .ourResults {
+    text-align: center;
+    font-weight: bold;
+    font-size: 18px;
+    padding: 50px   10px   0;
+    line-height: 150%;
+}
+
+.services .ourResults span {
+    font-size: 36px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE SERVICES SECTION ****************/
+
+@media only screen and (max-width: 1024px) {
+   
+   .services {
+       margin-top: 435px;
+   }
+}
+
+@media only screen and (max-width: 480px) {
+   .services {
+   margin-bottom: 31px;
+   }
+    
+   .services .title {
+   font-size: 25px;
+   }
+
+   .services .title:after {
+       height: 6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+    .services p.whatWeDo {
+    font-size: 20px;
+    }  
+    
+    .services .ourResults div {
+    margin-bottom: 50px;
+    }
+
+}
+
+/******************************************************/
+/*************** END: SERVICES SECTION ****************/
+/******************************************************/
+
+
+
+
+
+
+/******************************************************/
+/************** START: ABOUT US SECTION ***************/
+/******************************************************/
+
+.aboutUs {
+    height: 600px;
+}
+
+.aboutUs div {
+    float: left;
+}
+
+
+.aboutUs .ourCompany {
+   width: 50%;
+   background-color: #F05422;
+   color: #fff;
+   height: 600px;
+   padding: 79px   20px   0;
+   text-align: center;
+   line-height: 150%;
+}
+
+.aboutUs .aboutUsImage {
+   background-image: url(../images/photos/about-our-forex-company/our-forex-company.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: top center;
+   background-color: #e74c3c;
+   width: 50%;
+   height: 600px;
+}
+
+/** AboutUs Title **/
+
+.aboutUs .ourCompany .title {
+   font-size: 30px;
+}
+
+.aboutUs .ourCompany .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #fff;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.aboutUs .ourCompany h2 {
+    margin-bottom: 28px; 
+}
+
+/** AboutUs Description **/
+
+.aboutUs .ourCompany p {
+    font-size: 16px;
+}
+
+
+/*************** MEDIA QUERIES FOR THE ABOUT US SECTION ****************/
+
+@media only screen and (max-width: 830px) {
+ 
+     .aboutUs, .aboutUs .ourCompany, .aboutUs .aboutUsImage  {
+       height: 700px;
+     }
+    
+     .aboutUs .ourCompany {
+       padding: 71px   10px   0;
+     }
+
+}
+
+
+@media only screen and (max-width: 768px) {
+ 
+     .aboutUs {
+       height: auto; 
+     }
+    
+     .aboutUs div {
+        float: none;
+     }
+    
+     .aboutUs .ourCompany {
+       width: 100%;
+       height: auto;
+       padding-bottom: 20px;
+     }
+
+     .aboutUs .aboutUsImage {
+      width: 100%;
+      height: 400px;
+     }
+}
+
+@media only screen and (max-width: 480px) {
+     .aboutUs .ourCompany .title {
+       font-size: 25px;
+     }
+
+    .aboutUs .ourCompany .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+     
+}
+
+/****************************************************/
+/************** END: ABOUT US SECTION ***************/
+/****************************************************/
+
+
+
+
+
+/**********************************************************/
+/**************** START: CLIENTS SECTION ******************/
+/**********************************************************/
+
+.clients .container {
+    text-align: center;
+    padding: 71px   10px   0;
+}
+
+/** CLIENTS Introduction **/
+
+.clients .title {
+   font-size: 30px;
+}
+
+.clients .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #F05422;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.clients h2  {
+    margin-bottom: 28px; 
+}
+
+.clients p {
+    font-size: 16px;
+    line-height: 150%;
+    margin-bottom: 40px;
+}
+
+/** Clients Gallery **/
+
+.clients ul.clientsGallery {
+    list-style-type: none;
+}
+
+.clients ul.clientsGallery li {
+    width: 25%;
+    float: left;
+    overflow: hidden;
+    position: relative;
+}
+
+.clients ul.clientsGallery a {
+    text-decoration: none;
+}
+
+
+.clients ul.clientsGallery img {
+    width: 100%;
+    display: block;
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.clients ul.clientsGallery li img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.clients ul.clientsGallery  li  .caption img {
+    -webkit-transition: all 1s;
+    transition: all 1s;
+}
+
+.clients ul.clientsGallery  li .caption:hover img {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.clients ul.clientsGallery  li .caption  .photoOverlay {
+    padding:  30% 0;
+    position: absolute;
+    background-color: rgba(240, 84, 34, 0.7);
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #fff;
+    opacity: 0;
+    -webkit-transition: all  0.5s;
+    transition: all  0.5s;
+    text-align: center;
+    width: 100%;
+}
+
+.clients ul.clientsGallery li .caption .photoOverlay:hover  {
+    opacity: 1;
+}
+
+
+
+/*************** MEDIA QUERIES FOR THE CLIENTS SECTION ****************/
+
+
+@media only screen and (max-width: 1024px) {
+    .clients ul.clientsGallery li {
+    width: 50%;
+    }
+}
+
+
+
+@media only screen and (max-width: 480px) {
+    
+    .clients .title {
+       font-size: 25px;
+     }
+
+    .clients .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+    
+    .clients ul.clientsGallery li {
+    width: 100%;
+    }
+}
+
+/**********************************************************/
+/****************** END: CLIENTS SECTION *****************/
+/**********************************************************/
+
+
+
+
+
+/**************************************************/
+/************** START: TEAM SECTION ***************/
+/**************************************************/
+
+.meetOurTeam .container {
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+/** Team Introduction **/
+
+.meetOurTeam .title {
+   font-size: 30px;
+}
+
+.meetOurTeam  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #F05422;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+ 
+.meetOurTeam h2  {
+    margin-bottom: 28px;
+}
+
+.meetOurTeam p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Team Members **/
+
+.teamMembers {
+    margin-top: 28px;
+}
+
+.meetOurTeam ul.teamMembers  {
+    list-style-type: none;
+}
+
+
+.meetOurTeam ul.teamMembers li {
+    
+}
+
+.meetOurTeam ul.teamMembers img {
+     width: 100%;
+     
+}
+
+/** Images Overlay **/
+
+.meetOurTeam .teamMembers a {
+    text-decoration: none;
+}
+
+.meetOurTeam .teamMembers p  {
+    font-weight: bold;
+}
+
+.meetOurTeam .teamMembers .caption {
+    position: relative;
+    max-width: 380px;
+    max-height: 450px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+
+.meetOurTeam .teamMembers .photo_Overlay {
+    position: absolute;
+    color: white;
+    background-color: rgba(240, 84, 34, 0.6);
+    padding: 31px  15px;
+    margin: 0 15%;
+    bottom: 12%;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+    width: 70%;
+    opacity: 1;
+    
+}
+
+.meetOurTeam .teamMembers .caption:hover .photo_Overlay {
+    background-color: #fff;
+    color: #F05422;
+}
+
+/*************** MEDIA QUERIES FOR THE TEAM SECTION ****************/
+
+
+@media only screen and (max-width: 1000px) {
+    .meetOurTeam p {
+    font-size: 16px;
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    .meetOurTeam .title {
+       font-size: 25px;
+     }
+
+    .meetOurTeam .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+}
+
+/************************************************/
+/************** END: TEAM SECTION ***************/
+/************************************************/
+
+
+
+
+
+
+
+/**********************************************************/
+/************** START: TESTIMONIALS SECTION ***************/
+/**********************************************************/
+
+
+.clientTestimonials {
+    background-color: #F05422;
+    background-image: -webkit-gradient(linear,left top, left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0.6))), url(../images/photos/forex-client-testimonials/bg-forex-client-testimonials.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.6)), url(../images/photos/forex-client-testimonials/bg-forex-client-testimonials.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-attachment: fixed;
+    height: auto;
+    color:#fff;
+    margin-top: 67px;
+}
+
+.clientTestimonials img {
+    width: 80%;
+    border-radius: 50%;
+}
+
+/** Testimonials Introduction **/
+
+.testimonials .title {
+   font-size: 30px;
+}
+
+.testimonials  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #F05422;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.testimonials h2 {
+    margin-bottom: 28px;
+   
+}
+
+.testimonials p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Client Testimonials **/
+
+.testimonials .wrapper .client{
+    padding: 101px   10px   71px;
+    text-align: center;
+   
+}
+
+/** Client Quotes **/
+
+.testimonials .wrapper .quotes{
+    padding: 191px   10px   0;
+    text-align: center;
+   
+}
+
+/*************** MEDIA QUERIES FOR THE TESTIMONIALS SECTION ****************/
+
+
+@media only screen and (max-width: 1000px) {
+    
+    .testimonials .container {
+    padding: 71px  10px 0 ;
+   
+    }
+    
+    .testimonials .wrapper .quotes{
+    padding: 171px   10px   0;
+    text-align: center;
+   
+    }
+    
+    .col.quotes { 
+		margin: 1% 0 1% 0%;
+	}
+   
+}
+
+@media only screen and (max-width: 800px) {
+    .testimonials .wrapper .quotes{
+    padding: 151px   10px   0;
+    text-align: center;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 10%  30% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 5% 10px 10%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 480px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  30% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .testimonials .wrapper .client {
+        width: 100%;
+        padding: 20%  20% 0;
+   
+    }
+    
+     .testimonials .wrapper .quotes{
+        width: 100%;
+        padding: 10% 10px 20%;
+   
+    }
+   
+}
+
+/********************************************************/
+/************** END: TESTIMONIALS SECTION ***************/
+/********************************************************/
+
+
+
+
+
+
+/**********************************************************/
+/************** START: CONTACT US SECTION *****************/
+/**********************************************************/
+
+.contactUs .container{
+    padding: 71px   10px   0;
+    text-align: center;
+   
+}
+
+/** Contact US Introduction **/
+
+.contactUs .title  {
+   font-size: 30px;
+}
+
+.contactUs  .title:after {
+   display: block;
+   content:"";
+   height:12px;
+   width: 82px;
+   background-color: #F05422;
+   margin: 0 auto;
+   margin-top: 16px;
+}
+
+.contactUs h2  {
+    margin-bottom: 28px;
+   
+}
+
+
+.contactUs p {
+    font-size: 16px;
+    line-height: 150%;
+}
+
+/** Contact Details **/
+
+.contactUs #contact_details {
+    padding: 0  10px;
+    margin-top: 61px;
+}
+
+/** Contact Detail Icons **/
+
+.contactUs #address {
+    background-image: url(../images/icons/location.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+.contactUs #phoneNumber {
+    background-image: url(../images/icons/telephone.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+.contactUs #writeMail {
+    background-image: url(../images/icons/email.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 80px;
+}
+
+
+/** Contact FORM **/
+
+.contactUs #contact-form{
+    padding: 0 10px 71px;
+    text-align: center;
+   
+}
+
+.contactUs input[type=text],
+.contactUs input[type=tel],
+.contactUs input[type=email],
+.contactUs textarea {
+    padding: 20px;
+    border: 2px solid #000;
+    width: 100%;
+    color: #000;
+    font-size: 16px;
+}
+
+.contactUs textarea {
+    min-height: 245px;
+    margin: 30px 0  0;
+}
+
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
+  color: #636363;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {
+  color: #636363;
+}
+
+.contactUs input[type=submit] {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #F05422;
+    padding: 18px;
+    margin-top: 30px;
+    border: 3px solid transparent;
+    width: 260px;
+    cursor: pointer;
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.contactUs input[type=submit]:hover {
+   background-color: #fff;
+   color: #F05422;
+   border: 3px solid #F05422;
+}
+
+/*************** MEDIA QUERIES FOR THE CONTACT SECTION ****************/
+
+
+@media only screen and (max-width: 900px) {
+    
+    .contactUs #address, .contactUs #phoneNumber, .contactUs #writeMail  {
+       width: 100%;
+       margin: 1% 0 40px;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+        width: 100%;
+         margin: 1%  0;
+    }
+
+}
+
+@media only screen and (max-width: 768px) {
+    
+    .contactUs p br  {
+       display: none;
+    }
+   
+}
+
+@media only screen and (max-width: 700px) {
+    
+    .contactUs .form-elements {
+        width: 100%;
+        margin: 1% 0;
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email] {
+         margin: 0;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+    
+    .contactUs .title {
+       font-size: 25px;
+     }
+
+    .contactUs .title:after {
+       height:6px;
+       width: 42px;
+       margin-top: 10px;
+    }
+
+    .contactUs input[type=submit] {
+        margin: 15px 0 0;
+    }
+   
+}
+
+@media only screen and (max-width: 320px) {
+    
+    .contactUs .container{
+       padding: 71px   10px   0;
+       text-align: center;
+   
+    }
+    
+    .contactUs input[type=text],
+    .contactUs input[type=tel],
+    .contactUs input[type=email],
+    .contactUs textarea {
+        padding: 20px  10px;
+    }
+    
+    .contactUs input[type=submit] {
+        width: auto;
+    }
+   
+}
+
+
+
+/**********************************************************/
+/************** END: CONTACT US SECTION *******************/
+/**********************************************************/
+
+
+
+
+
+
+/****************************************************/
+/*************** START: MAP SECTION *****************/
+/****************************************************/
+
+#map {
+    width: 100%;
+    height: 532px;
+    background-color: #F05422;
+}
+
+/******************************************************/
+/***************** END: MAP SECTION *******************/
+/******************************************************/
+
+
+
+/******************************************************/
+/*************** START: FOOTER SECTION ****************/
+/******************************************************/
+
+.footer .container .copyright {
+    text-align: left;
+    padding: 56px 10px;
+}
+
+.footer .container .socialMedia {
+    text-align: left;
+    padding: 47px 0;
+}
+
+.footer .container a.stevekuzanwa {
+    font-weight: bold;
+    text-decoration: none;
+    color: #F05422;
+}
+
+/** Social Media Icons **/
+.footer ul {
+    list-style-type: none;
+    float: right;
+}
+
+.footer ul li {
+    float: left;
+}
+
+.footer ul li a {
+    text-decoration: none;
+    float: left;
+    margin: 0 10px;
+    padding: 9px 5px;
+    width: 40px;
+    height: 40px;
+    border: 1px solid  #F05422;
+    background-color: #F05422;
+    color: #fff;
+    border-radius: 100px;
+    text-align: center;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+}
+
+.footer ul li a:hover {
+    background-color: #fff;
+    color: #F05422;
+    border: 1px solid #F05422;
+}
+
+
+/** Scroll To Top **/
+
+.scroll-to-top {
+     right:20px;
+     bottom:20px;
+     font-size: 25px;
+     padding: 5px 15px 10px;
+     background-color: #F05422;
+     color: #fff;
+     border: 1px solid #fff;
+     position:fixed;
+     text-decoration: none; 
+     -webkit-transition: .3s; 
+     transition: .3s;
+     display: none;
+}
+
+.scroll-to-top:hover {  
+     background-color: #7c2205;
+}
+
+/*************** MEDIA QUERIES FOR THE FOOTER SECTION ****************/
+
+@media only screen and (max-width: 850px) {
+    
+    .footer .container .copyright, .footer .container .socialMedia{
+        text-align: center;
+        width: 100%;
+     }
+    
+    .footer ul {
+        float: none;
+    }
+    
+     .footer ul li {
+        text-align: center;
+        float: none;
+        display: inline-block;
+    }
+    
+    .footer .container .copyright {
+        padding: 56px 10px 10px;
+    }
+
+    .footer .container .socialMedia {
+        padding: 0  0  47px;
+    }
+    
+    .footer .col {
+        margin: 0;
+    }
+    
+   
+}
+
+
+/******************************************************/
+/*************** END: FOOTER SECTION ******************/
+/******************************************************/
+
+
+
+
+
+
+
+/******************************************************************************/
+/******************* START: Customising The SLICK Plugin  *********************/
+/******************************************************************************/
+
+/** Dots **/
+
+.slick-dots {
+    bottom: 25px;
+}
+
+.slick-dots li {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 4px;
+  background: transparent;
+  border-radius: 12px;
+  overflow: hidden;
+  text-indent: -999em;
+  border: 1px solid #fff;
+  cursor: pointer;
+}
+.slick-dots li.slick-active {
+  background: #fff;
+  cursor: default;
+}
+
+
+/** Arrows **/
+
+.slick-prev {
+    left: 25px;
+    z-index: 999;
+}
+
+.slick-next {
+    right: 25px;
+
+}
+    
+
+/******************************************************************************/
+/******************** END: Customising The SLICK Plugin  **********************/
+/******************************************************************************/
+
+
+
+
+
+
+/******************************************************************************/
+/***************  START: Customising Magnific Pop Up Plugin  ******************/
+/******************************************************************************/
+
+
+
+/******* Zoom effect *******/
+
+/* start state */
+.mfp-zoom-in  .mfp-with-anim {
+    opacity: 0;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out; 
+    -webkit-transform: scale(0.8); 
+    transform: scale(0.8); 
+}
+  
+.mfp-zoom-in.mfp-bg {
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-out;
+    transition: all 0.3s ease-out;
+}
+  
+/* animate in */
+
+.mfp-zoom-in.mfp-ready  .mfp-with-anim {
+      opacity: 1;
+      -webkit-transform: scale(1);
+      transform: scale(1); 
+}
+.mfp-zoom-in.mfp-ready.mfp-bg {
+      opacity: 0.8; 
+}
+ 
+/* animate out */
+.mfp-zoom-in.mfp-removing .mfp-with-anim {
+      -webkit-transform: scale(0.8);
+      transform: scale(0.8); 
+      opacity: 0;
+}
+.mfp-zoom-in.mfp-removing.mfp-bg {
+      opacity: 0;
+}
+    
+ 
+/******************************************************************************/
+/****************  END: Customising Magnific Pop Up Plugin  *******************/
+/******************************************************************************/
+
+
+/*****************************************************************************************/
+/******************* START: Customising The jQuery Validation Plugin *********************/
+/*****************************************************************************************/
+
+.contactUs #contact-form  label.error {
+    color: #ff0000;
+    text-align: left;
+    display: block;
+}
+
+.contactUs #contact-form   input.error, 
+.contactUs #contact-form   textarea.error {
+    border: 2px solid #ff0000;
+    outline: none;
+}
+
+@media only screen and (max-width: 480px) {
+   .contactUs #contact-form  label.error {
+        margin-bottom: 10px;
+    }
+}
+
+/***************************************************************************************/
+/******************* END: Customising The jQuery Validation Plugin *********************/
+/***************************************************************************************/
+
+
+/*******************************************************************/
+/******************* Hidding Elements On Slide *********************/
+/*******************************************************************/
+
+.js-hidden  {
+    visibility: hidden;
+}
+
+/****************************************************************/
+/******************* END: Elements On Slide *********************/
+/****************************************************************/
+
